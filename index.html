@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proof of Existence — Zero Ghosts</title>
+  <meta name="description" content="100 glitter-bodied ghosts, procedurally drawn and witnessed on-chain. Nobody believes in ghosts. So we minted them.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zero Ghosts">
+  <meta property="og:title" content="Proof of Existence — Zero Ghosts">
+  <meta property="og:description" content="100 glitter-bodied ghosts, procedurally drawn and witnessed on-chain. Nobody believes in ghosts. So we minted them.">
+  <meta property="og:url" content="https://zieroo1.github.io/proof-of-existence/">
+  <meta property="og:image" content="https://zieroo1.github.io/proof-of-existence/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/ghosts/66.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="Proof of Existence">
+      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8052ff"/><stop offset=".55" stop-color="#e146ff"/><stop offset="1" stop-color="#ffb829"/></linearGradient></defs>
+        <path d="M16 2.5c6.4 0 11 4.6 11 10.6V28l-3.7-2.6L19.6 29 16 25.6 12.4 29l-3.7-3.6L5 28V13.1C5 7.1 9.6 2.5 16 2.5Z" fill="url(#lg)"/>
+        <ellipse cx="12.2" cy="14" rx="1.7" ry="2.4" fill="#000"/><ellipse cx="19.8" cy="14" rx="1.7" ry="2.4" fill="#000"/>
+      </svg>
+      <span>Proof of Existence</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#witnessed">Ghosts</a>
+    </nav>
+    <a class="btn" href="#exist">Mint</a>
+  </header>
+
+  <main id="top">
+    <section class="scene scene--hero" data-shape="ghost" data-x="0.4" data-scale="0.82">
+      <div class="wrap">
+        <div class="copy">
+          <h1 class="display">Proof of<br>existence.</h1>
+          <p class="label">Zero Ghosts · 100 spirits</p>
+          <p class="body">Nobody believes in ghosts. So we minted&nbsp;them.</p>
+          <a class="btn" href="#witnessed">See the ghosts</a>
+        </div>
+      </div>
+      <span class="scroll-hint" aria-hidden="true">Scroll</span>
+    </section>
+
+    <section class="scene scene--center" id="manifesto" data-shape="chaos" data-x="0" data-scale="1">
+      <p class="statement">Every ghost begins as noise.<br>Glitter, light&nbsp;— nothing anyone can&nbsp;hold.</p>
+    </section>
+
+    <section class="scene" data-shape="block" data-x="-0.42" data-scale="0.72">
+      <div class="wrap">
+        <div class="copy copy--right">
+          <h2 class="heading">Then the chain takes a&nbsp;witness.</h2>
+          <p class="body">Eight hand-coded layers collapse into one DNA hash, sealed in a block. From that moment a ghost is no longer a rumour. It is&nbsp;proven.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" data-shape="sphere" data-x="0.45" data-scale="0.82">
+      <div class="wrap">
+        <div class="copy">
+          <h2 class="heading">One hundred.<br>Not one more.</h2>
+          <p class="body"><span id="combos">49.5 million</span> possible souls. Only a hundred were pulled out of the&nbsp;void. Each point of light is one of&nbsp;them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene--witnessed" id="witnessed" data-shape="dust" data-x="0" data-scale="1" data-dim="0.5">
+      <div class="wrap witnessed">
+        <div class="witnessed-intro">
+          <h2 class="heading">The witnessed.</h2>
+          <p class="body">The rarest of the hundred, ranked by how few others share their&nbsp;traits.</p>
+          <div class="pager">
+            <button type="button" class="ghost-link" id="prev" aria-label="Previous ghost">←</button>
+            <span class="caption" id="counter"></span>
+            <button type="button" class="ghost-link" id="next" aria-label="Next ghost">→</button>
+          </div>
+        </div>
+        <div class="stage" id="stage" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="scene scene--center" id="exist" data-shape="ghost" data-x="0" data-scale="1.05" data-dim="0.32">
+      <div class="final">
+        <h2 class="display">Exist.</h2>
+        <p class="label">Mint date to be announced</p>
+        <span class="btn btn--quiet" aria-disabled="true">Mint · soon</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© Proof of Existence</span>
+    <span>Zero Ghosts · 100% procedural</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

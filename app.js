@@ -346,6 +346,8 @@
   function initPage() {
     const c = D.combinations;
     $('#combos').textContent = c >= 1e6 ? `${(c / 1e6).toFixed(1)} million` : c.toLocaleString('en-US');
+    const words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
+    $('#layers').textContent = words[D.layers] ?? String(D.layers);
     witnessed();
   }
 
@@ -369,7 +371,7 @@
       copy.className = 'stage-copy stage-enter';
       copy.innerHTML = `<span class="role">Rank ${String(g.rank).padStart(2, '0')} · score ${g.score.toFixed(1)}</span>
         <span class="name"><small>Zero Ghost</small>#${g.id}</span>
-        <ul>${g.traits.slice(0, 4).map((tr) => `<li><span>${tr.name}</span><span>${pct(tr.share)}</span></li>`).join('')}</ul>`;
+        <ul>${g.traits.slice(0, 4).map((tr) => `<li><span>${tr.layer} · ${tr.name}</span><span>${pct(tr.share)}</span></li>`).join('')}</ul>`;
 
       stage.replaceChildren(media, copy);
       counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(list.length).padStart(2, '0')}`;
